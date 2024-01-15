@@ -5,7 +5,9 @@ from collections import Counter
 
 
 class Matrix():
-
+    '''
+    Класс создает матрицу марковских переходов
+    '''
     def __init__(self, l1, proba_dict=None, m_matrix=None, states=None):
         self.m_matrix= m_matrix
         self.proba_dict = proba_dict
@@ -15,7 +17,7 @@ class Matrix():
 
 
     def create_matrix(self):
-        """ Создание самой матрицы, преобразует словарь с вероятностями переходов в матрицу переходов
+       """ Создание самой матрицы, преобразует словарь с вероятностями переходов в матрицу переходов
         """
         di = self.proba_dict
         key_list = sorted(di.keys())
